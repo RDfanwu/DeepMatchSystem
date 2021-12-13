@@ -123,6 +123,7 @@ class ui_MainWindow(QMainWindow):
 
         # 左边的显示窗口
         self.left_merge_widget = QVTKRenderWindowInteractor(self.bottom_bottom_merge_widget)
+        self.left_merge_widget.GlobalWarningDisplayOff();
         self.bottom_bottom_merge_layout.addWidget(self.left_merge_widget)
         self.left_merge_disp = vtk.vtkRenderer()
         self.left_merge_disp.SetBackground(.2, .3, .4)
@@ -131,6 +132,7 @@ class ui_MainWindow(QMainWindow):
 
         # 右边的显示窗口
         self.right_merge_widget = QVTKRenderWindowInteractor(self.bottom_bottom_merge_widget)
+        self.right_merge_widget.GlobalWarningDisplayOff();
         self.bottom_bottom_merge_layout.addWidget(self.right_merge_widget)
         self.right_merge_disp = vtk.vtkRenderer()
         self.right_merge_disp.SetBackground(.2, .3, .4)
@@ -199,6 +201,7 @@ class ui_MainWindow(QMainWindow):
 
         # 左边的显示窗口
         self.left_match_widget = QVTKRenderWindowInteractor(self.bottom_bottom_match_widget)
+        self.left_match_widget.GlobalWarningDisplayOff();
         self.bottom_bottom_match_layout.addWidget(self.left_match_widget)
         self.left_match_disp = vtk.vtkRenderer()
         self.left_match_disp.SetBackground(.2, .3, .4)
@@ -207,6 +210,7 @@ class ui_MainWindow(QMainWindow):
 
         # 右边的显示窗口
         self.right_match_widget = QVTKRenderWindowInteractor(self.bottom_bottom_match_widget)
+        self.right_match_widget.GlobalWarningDisplayOff();
         self.bottom_bottom_match_layout.addWidget(self.right_match_widget)
         self.right_match_disp = vtk.vtkRenderer()
         self.right_match_disp.SetBackground(.2, .3, .4)
