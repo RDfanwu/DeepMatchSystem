@@ -100,7 +100,7 @@ def fgr_registration(pc_src, pc_tgt, voxel_size=50.0):
                                                                       o3d.geometry.KDTreeSearchParamHybrid(
                                                                           radius=voxel_size * 2, max_nn=100))
 
-    pc_res_fgr = o3d.pipelines.registration.registration_fast_based_on_feature_matching(
+    pc_res_fgr = o3d.pipelines.registration.registration_fgr_based_on_feature_matching(
         pc_src, pc_tgt, pc_src_fgr_fpfh, pc_tgt_fgr_fpfh,
         o3d.pipelines.registration.FastGlobalRegistrationOption(
             maximum_correspondence_distance=voxel_size * 2))
